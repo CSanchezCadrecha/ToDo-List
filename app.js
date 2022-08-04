@@ -14,7 +14,7 @@ let close = document.getElementsByClassName("close");
 
 for (let i = 0; i < close.length; i++) {
   close[i].onclick = function() {
-    var div = this.parentElement;
+    let div = this.parentElement;
     div.style.display = "none";
   }
 }
@@ -22,7 +22,7 @@ for (let i = 0; i < close.length; i++) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   let li = document.createElement("li");
-  let inputValue = document.getElementById("myInput").value;
+  let inputValue = document.getElementById("add-input").value;
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -30,7 +30,7 @@ function newElement() {
   } else {
     document.getElementById("ul-list").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  document.getElementById("add-input").value = "";
 
   let span = document.createElement("SPAN");
   let txt = document.createTextNode("\u00D7");
@@ -40,7 +40,7 @@ function newElement() {
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      var div = this.parentElement;
+      let div = this.parentElement;
       div.style.display = "none";
     }
   }
